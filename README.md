@@ -8,8 +8,6 @@
 
 - 🔥 Zamonaviy va yengil foydalanuvchi interfeysi
 - 📱 Mobilga mos (responsive) dizayn
-- ⚛️ React asosida tuzilgan komponentlar
-- 🌙 Yorug‘ va qorong‘u rejim (agar mavjud bo‘lsa)
 - 🌐 SEO uchun optimallashtirilgan
 
 ## 🛠 Texnologiyalar
