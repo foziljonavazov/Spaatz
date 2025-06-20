@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Spaatz - Professional veb platforma. Foydalanuvchi tajribasi va qulay interfeys bilan ta'minlangan."
+    />
+    <meta
+      name="keywords"
+      content="Spaatz, web platform, frontend, UI/UX, React, responsive design"
+    />
+    <meta name="author" content="Foziljon Avazov" />
+    <meta property="og:title" content="Spaatz Platform" />
+    <meta
+      property="og:description"
+      content="Professional veb tajriba va zamonaviy dizayn bir joyda."
+    />
+    <meta
+      property="og:image"
+      content="https://spaatz.netlify.app/imgs/spatz-logo.webp"
+    />
+    <meta property="og:url" content="https://spaatz.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Spaatz Platform" />
+    <meta
+      name="twitter:description"
+      content="Professional veb tajriba va zamonaviy dizayn bir joyda."
+    />
+    <meta
+      name="twitter:image"
+      content="https://spaatz.netlify.app/imgs/spatz-logo.webp"
+    />
+    <title>Spaaatz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./imgs/spatz-logo.webp"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" id="aloneAnchor">Spaatz</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://webflow.com">Web App</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://expo.dev">Mobile App</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blog/pricing.html">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://medium.com">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blog/utility-pages.html"
+                >Utility Pages</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link request-demo"
+                href="./blog/pricing.html"
+                target="_blank"
+                >Request A Demo</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="hero-section">
+      <h1>All Your Business Analytics In A Single <span>Dashboard</span></h1>
+      <button
+        class="btn btn-primary mt-4"
+        id="getstarted"
+        onclick="window.open('./blog/pricing.html', '_blank')"
+      >
+        Get Started
+      </button>
+    </section>
+    <section class="container" id="img-container">
+      <img
+        src="./imgs/0d8c81364a1b460e5cce072da5a7ba532290c22f.webp"
+        class="img-fluid"
+        alt="app screenshot"
+        id="img-fluid-1"
+      />
+    </section>
+    <section class="container content-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 fade-in">
+          <h1 class="heading">
+            Perfect Approach Towards <span>Software</span>
+          </h1>
+          <p class="subtext">
+            It’s a Social Collaboration Mail Software Platform That Employees
+            Really Love To Use, With Rich Personalized Interface Helps To
+            Promote Your Product And Connect With Good Buyer.
+          </p>
+          <div class="feature">
+            <div class="icon bg-pink m-3">
+              <img
+                src="./imgs/diamond-icon.webp"
+                alt="Icon"
+                style="color: pink"
+              />
+            </div>
+            <div>
+              <p class="feature-title">Increase Workflow</p>
+              <p class="feature-text">
+                Abilities taken within a multiple platforms
+              </p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="icon bg-green m-3">
+              <img
+                src="./imgs/lock-icon.webp"
+                alt="Icon"
+                style="color: green"
+              />
+            </div>
+            <div>
+              <p class="feature-title">Secured Structure</p>
+              <p class="feature-text">
+                Purpose oriented structures protect thedata
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 image-section fade-in">
+          <img src="./imgs/people.webp" alt="Team Image" />
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-section d-flex align-items-center" id="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 fade-in">
+            <h1 class="display-4 fw-bold mb-4">
+              Capture & Convert<br />
+              Excellent Leads<br />
+              <span class="text-primary">More Easily.</span>
+            </h1>
+            <p class="lead text-muted mb-4">
+              You Can Control The Inbox Like Turn Off Notifications, Choose When
+              You Check In, Don't Default To Email, Compose Mail And Reply The
+              Mail You Want.
+            </p>
+          </div>
+          <div class="col-lg-6 fade-in">
+            <div class="hero-image position-relative">
+              <img
+                src="./imgs/work.webp"
+                alt="Team working"
+                class="img-fluid"
+              />
+              <div
+                class="position-absolute top-50 start-50 translate-middle"
+                id="workFromAnyWhere"
+              >
+                <div class="bg-dark text-white px-3 py-2 rounded-pill">
+                  <i class="fas fa-briefcase me-2"></i>
+                  Work From Anywhere
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Important Tools -->
+          <div class="col-lg-3 col-md-6 fade-in">
+            <div class="card feature-card h-100 p-4">
+              <h4 class="fw-bold mb-4">Important<br />Tools</h4>
+              <div class="d-flex align-items-center mb-3">
+                <div class="tool-icon ps-icon">
+                  <i class="fa-brands fa-square-font-awesome-stroke"></i>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-3">
+                <div class="tool-icon figma-icon">
+                  <i class="fab fa-figma"></i>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="tool-icon xd-icon">
+                  <i class="fas fa-pen-nib"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Responsive Support -->
+          <div class="col-lg-3 col-md-6 fade-in">
+            <div class="card feature-card h-100 p-4">
+              <h4 class="fw-bold mb-4">
+                Support<br />for<br />Responsive<br />device
+              </h4>
+              <div class="text-center">
+                <img
+                  src="./imgs/resp.webp"
+                  alt="Responsive devices"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Monitor -->
+          <div class="col-lg-3 col-md-6 fade-in">
+            <div class="card feature-card h-100 p-4 text-center">
+              <div class="growth-text">90%</div>
+              <div class="mt-3">
+                <svg width="100%" height="60" viewBox="0 0 200 60">
+                  <path
+                    d="M0,50 Q50,20 100,30 T200,10"
+                    stroke="#28a745"
+                    stroke-width="3"
+                    fill="none"
+                  />
+                  <circle cx="180" cy="15" r="4" fill="#ff6b6b" />
+                </svg>
+              </div>
+              <p class="text-muted mt-3">Monitor Growth</p>
+            </div>
+          </div>
+
+          <!-- Media Support -->
+          <div class="col-lg-3 col-md-6 fade-in">
+            <div class="card feature-card h-100 p-4">
+              <h4 class="fw-bold mb-4">
+                Image, Video, Audio<br />Gif, support
+              </h4>
+              <div class="d-flex flex-wrap justify-content-center">
+                <div class="media-icon media-folder">
+                  <i class="fas fa-folder"></i>
+                </div>
+                <div class="media-icon media-music">
+                  <i class="fas fa-music"></i>
+                </div>
+                <div class="media-icon media-video">
+                  <i class="fas fa-video"></i>
+                </div>
+                <div class="media-icon media-gif">
+                  <span style="font-size: 12px; font-weight: bold">GIF</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="dashboard-mockup bg-dark">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h6 class="mb-0">Global Situations Chart</h6>
+                <!-- Desktop view - badges -->
+                <div class="badge-group d-flex gap-2">
+                  <span class="badge bg-secondary" style="cursor: pointer"
+                    >New Cases</span
+                  >
+                  <span class="badge bg-secondary" style="cursor: pointer"
+                    >Worldwide</span
+                  >
+                  <span class="badge bg-secondary" style="cursor: pointer"
+                    >All Time</span
+                  >
+                  <i
+                    class="fas fa-ellipsis-h align-self-center"
+                    style="cursor: pointer"
+                  ></i>
+                </div>
+
+                <!-- Mobile view - select dropdown -->
+                <select class="form-select form-select-sm badge-select">
+                  <option selected>New Cases</option>
+                  <option>Worldwide</option>
+                  <option>All Time</option>
+                  <option>More...</option>
+                </select>
+              </div>
+              <div class="row mb-3">
+                <div class="col-4">
+                  <small class="text-white">US Cases</small>
+                  <div class="fw-bold">34,456,789</div>
+                  <div class="text-success">+5,456,789</div>
+                </div>
+                <div class="col-4">
+                  <small class="text-white">Global Cases</small>
+                  <div class="fw-bold">456,789,123</div>
+                  <div class="text-success">+45,678,912</div>
+                </div>
+              </div>
+              <div class="chart-container">
+                <svg width="100%" height="200" viewBox="0 0 600 200">
+                  <!-- Chart bars -->
+                  <rect
+                    x="50"
+                    y="150"
+                    width="8"
+                    height="30"
+                    fill="#28a745"
+                    opacity="0.7"
+                    data-value="8,553,719"
+                  />
+                  <rect
+                    x="70"
+                    y="140"
+                    width="8"
+                    height="40"
+                    fill="#28a745"
+                    opacity="0.8"
+                    data-value="11,404,958"
+                  />
+                  <rect
+                    x="90"
+                    y="120"
+                    width="8"
+                    height="60"
+                    fill="#28a745"
+                    data-value="17,107,437"
+                  />
+                  <rect
+                    x="110"
+                    y="100"
+                    width="8"
+                    height="80"
+                    fill="#28a745"
+                    data-value="22,809,916"
+                  />
+                  <rect
+                    x="130"
+                    y="80"
+                    width="8"
+                    height="100"
+                    fill="#28a745"
+                    data-value="28,512,395"
+                  />
+                  <rect
+                    x="150"
+                    y="60"
+                    width="8"
+                    height="120"
+                    fill="#28a745"
+                    data-value="34,214,874"
+                  />
+                  <rect
+                    x="170"
+                    y="40"
+                    width="8"
+                    height="140"
+                    fill="#28a745"
+                    data-value="39,917,353"
+                  />
+                  <rect
+                    x="190"
+                    y="30"
+                    width="8"
+                    height="150"
+                    fill="#28a745"
+                    data-value="42,768,592"
+                  />
+                  <rect
+                    x="210"
+                    y="50"
+                    width="8"
+                    height="130"
+                    fill="#28a745"
+                    data-value="37,066,113"
+                  />
+                  <rect
+                    x="230"
+                    y="70"
+                    width="8"
+                    height="110"
+                    fill="#28a745"
+                    data-value="31,363,634"
+                  />
+                  <rect
+                    x="250"
+                    y="90"
+                    width="8"
+                    height="90"
+                    fill="#28a745"
+                    data-value="25,661,155"
+                  />
+                  <rect
+                    x="270"
+                    y="110"
+                    width="8"
+                    height="70"
+                    fill="#28a745"
+                    data-value="19,958,676"
+                  />
+                  <rect
+                    x="290"
+                    y="130"
+                    width="8"
+                    height="50"
+                    fill="#28a745"
+                    data-value="14,256,197"
+                  />
+                  <rect
+                    x="310"
+                    y="120"
+                    width="8"
+                    height="60"
+                    fill="#28a745"
+                    data-value="17,107,437"
+                  />
+                  <rect
+                    x="330"
+                    y="100"
+                    width="8"
+                    height="80"
+                    fill="#28a745"
+                    data-value="22,809,916"
+                  />
+                  <rect
+                    x="350"
+                    y="80"
+                    width="8"
+                    height="100"
+                    fill="#28a745"
+                    data-value="28,512,395"
+                  />
+                  <rect
+                    x="370"
+                    y="60"
+                    width="8"
+                    height="120"
+                    fill="#28a745"
+                    data-value="34,214,874"
+                  />
+                  <rect
+                    x="390"
+                    y="40"
+                    width="8"
+                    height="140"
+                    fill="#28a745"
+                    data-value="39,917,353"
+                  />
+                  <rect
+                    x="410"
+                    y="20"
+                    width="8"
+                    height="160"
+                    fill="#28a745"
+                    data-value="45,619,832"
+                  />
+                  <rect
+                    x="430"
+                    y="30"
+                    width="8"
+                    height="150"
+                    fill="#28a745"
+                    data-value="42,768,592"
+                  />
+                  <rect
+                    x="450"
+                    y="50"
+                    width="8"
+                    height="130"
+                    fill="#28a745"
+                    data-value="37,066,113"
+                  />
+                  <rect
+                    x="470"
+                    y="70"
+                    width="8"
+                    height="110"
+                    fill="#28a745"
+                    data-value="31,363,634"
+                  />
+                  <rect
+                    x="490"
+                    y="90"
+                    width="8"
+                    height="90"
+                    fill="#28a745"
+                    data-value="25,661,155"
+                  />
+                  <rect
+                    x="510"
+                    y="110"
+                    width="8"
+                    height="70"
+                    fill="#28a745"
+                    data-value="19,958,676"
+                  />
+                </svg>
+              </div>
+              <!-- Tooltip element -->
+              <div
+                id="tooltip"
+                style="
+                  position: absolute;
+                  display: none;
+                  background: #333;
+                  color: white;
+                  padding: 5px 10px;
+                  border-radius: 4px;
+                  font-family: Arial, sans-serif;
+                  font-size: 12px;
+                  pointer-events: none;
+                "
+              ></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="text-center">
+              <h2 class="fw-bold mb-4">Watch<br />And Learn</h2>
+              <button
+                class="btn btn-primary btn-lg rounded-pill px-4"
+                onclick="window.open('./blog/pricing.html', '_blank')"
+              >
+                Explore App <i class="fas fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid p-0">
+      <div class="container py-5">
+        <!-- Heading Section -->
+        <div class="text-center mb-5 fade-in">
+          <h1 class="display-4 hero-title">
+            Software That Drives Employee<br />
+            <span class="blue-text">Engagement & Productivity</span>
+          </h1>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="row align-items-center">
+          <!-- Left Column -->
+          <div class="col-lg-4 mb-4 mb-lg-0 slide-left">
+            <!-- Dark Card -->
+            <div
+              class="mb-4 feature-box active"
+              id="feature-0"
+              data-img="/imgs/some-screemshots.webp"
+            >
+              <h2 class="h4 feature-title">Flexible & Powerful</h2>
+              <p class="feature-text">
+                Branding is the process of developing a company's brand,
+                including name.
+              </p>
+            </div>
+
+            <!-- Feature Items -->
+            <div
+              class="mb-4 feature-box"
+              id="feature-1"
+              data-img="./imgs/Simplified-Workflow.webp"
+            >
+              <h3 class="h4 feature-title">Simplified Workflow</h3>
+              <p class="feature-text">
+                Standard model of data storage in which the digital data and zip
+                files are stored.
+              </p>
+            </div>
+
+            <div
+              class="mb-4 feature-box"
+              id="feature-2"
+              data-img="./imgs/ChatGPT Image Jun 13, 2025, 04_58_59 PM.webp"
+            >
+              <h3 class="h4 feature-title">Branded Scheduling</h3>
+              <p class="feature-text">
+                Workflow management system designed to compose and execute a
+                series.
+              </p>
+            </div>
+
+            <div
+              class="mb-4 feature-box"
+              id="feature-3"
+              data-img="./imgs/Data-Ana.webp"
+            >
+              <h3 class="h4 feature-title">Reporting Analytics</h3>
+              <p class="feature-text">
+                Activity related to selling or the amount of services sold in a
+                given time period.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column - Image -->
+          <div class="col-lg-8">
+            <div class="image-container">
+              <img
+                id="feature-image"
+                src="/imgs/some-screemshots.webp"
+                alt="Dashboard analytics"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="container">
+        <div class="row fade-in">
+          <div class="col-12">
+            <h2 class="testimonial-heading">
+              Featured Feedback <i class="fa-solid fa-star"></i>
+            </h2>
+          </div>
+        </div>
+
+        <div class="row align-items-center fade-in">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <p class="testimonial-text">
+              <span class="highlight-text">"Sarah</span> wants to build
+              processes and automation into my business like a programmer
+              without having to learn to code. My team is now using process to
+              be <span class="highlight-text">more productive</span>
+              <span class="secondary-text">without even knowing it"</span>
+            </p>
+
+            <div class="mt-4">
+              <h3 class="company-name">Utility Tech</h3>
+              <p class="rating-text">(4.5 / 5 Rating)</p>
+              <div class="rating-stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="testimonial-image">
+              <img
+                src="./imgs/sarah.webp"
+                alt="Customer testimonial"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <!-- Company Logos Section -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold mb-4 text-dark fade-in">
+          Loved By Teams Around The World
+        </h2>
+        <div class="row justify-content-center align-items-center g-4">
+          <div class="col-6 col-md-2 fade-in">
+            <div class="company-logos text-center">
+              <img
+                class="img-fluid"
+                src="./imgs/modern-home.webp"
+                alt="modern-home"
+                onclick="window.open('https://issuu.com/gvpublications/docs/liv_9-29', '_blank')"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="company-logos text-center">
+              <img
+                class="img-fluid"
+                src="./imgs/vs.webp"
+                alt="vs"
+                onclick="window.open('https://www.rocthepeace.org/', '_blank')"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="company-logos text-center">
+              <img
+                class="img-fluid"
+                src="./imgs/brand.webp"
+                alt="brand"
+                onclick="window.open('https://manuals.plus/uz/brand/ic-50cs-wireless-car-charger-manual', '_blank')"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="company-logos text-center">
+              <img
+                class="img-fluid"
+                src="./imgs/nature-home.webp"
+                alt="nature-home"
+                onclick="window.open('https://calmhome.framer.website/', '_blank')"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="company-logos text-center">
+              <img
+                class="img-fluid"
+                src="./imgs/classic-ds.webp"
+                alt="classic-ds"
+                onclick="window.open('https://devsnation.com/portfolio-archive/inspiration-in-cap-haitian/', '_blank')"
+              />
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <div class="company-logos text-center">
+              <img
+                class="img-fluid"
+                src="./imgs/lorem-ipsum.webp"
+                alt="lorem-ipsum"
+                onclick="window.open('https://blog.naver.com/semily_blog/223051220711', '_blank')"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Cards Section -->
+      <div class="row g-4 mb-5" id="initial-blogs">
+        <!-- Blog Card 1 -->
+        <div
+          class="col-lg-4 col-md-6 fade-in"
+          onclick="window.location.href = './blog/young-startups-article.html';"
+        >
+          <div class="card blog-card">
+            <img
+              src="./imgs/young-startups-with-spaaatz.webp"
+              class="card-img-top"
+              alt="Young Startups"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-3">
+                Young Startups With Spaatz In Full Throttle
+              </h5>
+              <p class="card-text text-muted mb-4 flex-grow-1">
+                Capitalize on low-hanging fruit to identify a ballpark value
+                added activity to beta test override the digital divide with
+                DevOps.
+              </p>
+              <div class="author-info">
+                <img
+                  src="./imgs/anatony-wills.png"
+                  alt="Antony Wills"
+                  class="author-avatar"
+                />
+                <div>
+                  <div class="fw-semibold">Antony Wills</div>
+                  <div class="blog-meta">
+                    December 22, 2021 •
+                    <span class="badge bg-primary category-badge"
+                      >Entertainment</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div
+          class="col-lg-4 col-md-6 fade-in"
+          onclick="window.location.href = './blog/tech-stack-article.html';"
+        >
+          <div class="card blog-card">
+            <img
+              src="./imgs/how-to-choose-a-tech (1).webp"
+              class="card-img-top"
+              alt="Tech Stack"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-3">
+                How To Choose A Tech Stack For Your Startup
+              </h5>
+              <p class="card-text text-muted mb-4 flex-grow-1">
+                Strategies on low-hanging fruit to identify a ballpark value
+                added activity to beta test override the digital divide with
+                DevOps.
+              </p>
+              <div class="author-info">
+                <img
+                  src="./imgs/natalia-tena.png"
+                  alt="Natalia Tena"
+                  class="author-avatar"
+                />
+                <div>
+                  <div class="fw-semibold">Natalia Tena</div>
+                  <div class="blog-meta">
+                    December 22, 2021 •
+                    <span class="badge bg-success category-badge"
+                      >Lifestyle</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div
+          class="col-lg-4 col-md-6 fade-in"
+          onclick="window.location.href = './blog/android-spaatz-article.html';"
+        >
+          <div class="card blog-card">
+            <img
+              src="./imgs/more-powerful.webp"
+              class="card-img-top"
+              alt="Android Development"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-3">
+                More Powerful, Polished Spaatz For Android
+              </h5>
+              <p class="card-text text-muted mb-4 flex-grow-1">
+                Collaborative on low-hanging fruit to identify a ballpark value
+                added activity to beta test override the digital form of the
+                divide.
+              </p>
+              <div class="author-info">
+                <img
+                  src="./imgs/john-metthow.png"
+                  alt="John Methow"
+                  class="author-avatar"
+                />
+                <div>
+                  <div class="fw-semibold">John Methow</div>
+                  <div class="blog-meta">
+                    December 24, 2021 •
+                    <span class="badge bg-warning category-badge"
+                      >Productivity</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Blog Cards (Hidden Initially) -->
+      <div class="row g-4 mb-5 additional-blogs" id="additional-blogs">
+        <!-- Blog Card 4 -->
+        <div
+          class="col-lg-4 col-md-6 fade-in"
+          onclick="window.location.href = './blog/ai-automation-article.html';"
+        >
+          <div class="card blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="AI Automation"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-3">
+                AI-Powered Automation: The Future of Business
+              </h5>
+              <p class="card-text text-muted mb-4 flex-grow-1">
+                Discover how artificial intelligence is revolutionizing business
+                processes and creating new opportunities for growth and
+                efficiency.
+              </p>
+              <div class="author-info">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  alt="Marcus Chen"
+                  class="author-avatar"
+                />
+                <div>
+                  <div class="fw-semibold">Marcus Chen</div>
+                  <div class="blog-meta">
+                    January 15, 2022 •
+                    <span class="badge bg-info category-badge">Technology</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card 5 -->
+        <div
+          class="col-lg-4 col-md-6 fade-in"
+          onclick="window.location.href = './blog/remote-work-article.html';"
+        >
+          <div class="card blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Remote Work"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-3">
+                Building Effective Remote Teams in 2022
+              </h5>
+              <p class="card-text text-muted mb-4 flex-grow-1">
+                Essential strategies for managing distributed teams and
+                maintaining productivity in the new era of remote work.
+              </p>
+              <div class="author-info">
+                <img
+                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  alt="Sarah Johnson"
+                  class="author-avatar"
+                />
+                <div>
+                  <div class="fw-semibold">Sarah Johnson</div>
+                  <div class="blog-meta">
+                    January 10, 2022 •
+                    <span class="badge bg-secondary category-badge"
+                      >Management</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Card 6 -->
+        <div
+          class="col-lg-4 col-md-6 fade-in"
+          onclick="window.location.href = './blog/cybersecurity-article.html';"
+        >
+          <div class="card blog-card">
+            <img
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+              class="card-img-top"
+              alt="Cybersecurity"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold mb-3">
+                Cybersecurity Best Practices for Startups
+              </h5>
+              <p class="card-text text-muted mb-4 flex-grow-1">
+                Protect your startup from cyber threats with these essential
+                security measures and industry best practices.
+              </p>
+              <div class="author-info">
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                  alt="David Rodriguez"
+                  class="author-avatar"
+                />
+                <div>
+                  <div class="fw-semibold">David Rodriguez</div>
+                  <div class="blog-meta">
+                    January 8, 2022 •
+                    <span class="badge bg-danger category-badge">Security</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- More Blogs Button -->
+      <div class="text-center fade-in">
+        <button
+          class="btn btn-primary more-blogs-btn"
+          id="moreBlogsBtn"
+          onclick="showMoreBlogs()"
+        >
+          More Blogs <i class="fas fa-arrow-right ms-2"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="hero-section py-5" id="last-section">
+      <div class="container text-center">
+        <!-- Matn va tugma -->
+        <div class="hero-content mb-5 px-4">
+          <h1 class="hero-title fw-bold display-4 mb-4">
+            Unleash Your Growth Potential
+          </h1>
+          <a
+            href="./blog/pricing.html"
+            class="btn btn-dark btn-lg px-4 rounded-pill demo-btn"
+          >
+            Request Demo <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+
+        <!-- Rasm -->
+        <img
+          src="./imgs/screenshot2.webp"
+          alt="Dashboard Preview"
+          class="img-fluid"
+          style="max-width: 100%; height: auto"
+        />
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Logo and Description -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <i class="fas fa-cube"></i>
+              </div>
+              <span class="logo-text">Spaatz</span>
+            </div>
+            <p class="footer-description">
+              Spaatz is a professional yet creative dashboard for organize your
+              business.
+            </p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.instagram.com"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Explore Column -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-column">
+              <h5>Explore</h5>
+              <ul>
+                <li><a href="https://webflow.com">Web App</a></li>
+                <li><a href="https://expo.dev">Mobile App</a></li>
+                <li><a href="https://medium.com">Blog</a></li>
+                <li><a href="https://contactpage.com">Contact</a></li>
+                <li><a href="https://dribbble.com">Demo</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Utility Column -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-column">
+              <h5>Utility</h5>
+              <ul>
+                <li><a href="https://choosealicense.com">Licenses</a></li>
+                <li><a href="https://styleguide.email">Style Guide</a></li>
+                <li><a href="https://keepachangelog.com">Change Log</a></li>
+                <li><a href="https://termly.io">Protected</a></li>
+                <li><a href="https://404pagefound.com">Not Found</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Category Column -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <div class="footer-column">
+              <h5>Category</h5>
+              <ul>
+                <li><a href="https://lifehacker.com">Lifestyle</a></li>
+                <li><a href="https://todoist.com/blog">Productivity</a></li>
+                <li><a href="https://hootsuite.com">Social Media</a></li>
+                <li><a href="https://boredpanda.com">Entertain</a></li>
+                <li><a href="https://behance.net">Creative</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Featured Image -->
+          <div class="col-lg-3 col-md-12 mb-4">
+            <div class="featured-image">
+              <img src="./imgs/featured-contwnt.webp" alt="Featured content" />
+              <div
+                class="play-button"
+                onclick="window.open('https://www.youtube.com/', '_blank')"
+              >
+                <i class="fas fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="row">
+          <div class="col-12">
+            <div
+              class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center"
+            >
+              <div class="mb-2 mb-md-0">
+                Spaatz © 2022. Designed by <a href="#">Victorflow</a> - Powered
+                by <a href="#">Webflow</a>
+              </div>
+              <div class="footer-links">
+                <a href="https://boredpanda.com">Entertainment</a>
+                <a href="https://lifehacker.com">Lifestyle</a>
+                <a href="https://todoist.com/blog">Productivity</a>
+                <a href="https://hootsuite.com">Social Media</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

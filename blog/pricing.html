@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaatz Pricing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../imgs/spatz-logo.webp" type="image/x-icon">
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .pricing-section {
+            padding: 80px 0;
+            background-color: #2c3e50;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .pricing-card {
+            background-color: #34495e;
+            border-radius: 16px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            height: 100%;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: #3498db;
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
+        }
+        
+        .pricing-card.featured {
+            border-color: #3498db;
+            background-color: #3498db;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #e74c3c;
+            color: #ffffff;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .plan-description {
+            color: #bdc3c7;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+        
+        .pricing-card.featured .plan-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .price {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 30px;
+        }
+        
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .price-period {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            margin-left: 8px;
+        }
+        
+        .pricing-card.featured .price-period {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+        
+        .features-list li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            color: #bdc3c7;
+            border-bottom: 1px solid rgba(189, 195, 199, 0.1);
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-card.featured .features-list li {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .features-list li i {
+            color: #27ae60;
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .features-list li.unavailable {
+            opacity: 0.5;
+        }
+        
+        .features-list li.unavailable i {
+            color: #e74c3c;
+        }
+        
+        .pricing-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid #3498db;
+            background-color: transparent;
+            color: #3498db;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .pricing-btn:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        
+        .pricing-card.featured .pricing-btn {
+            background-color: #ffffff;
+            color: #3498db;
+            border-color: #ffffff;
+        }
+        
+        .pricing-card.featured .pricing-btn:hover {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        
+        /* Modal Styles */
+        .modal-content {
+            background-color: #34495e;
+            border: none;
+            border-radius: 16px;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid #2c3e50;
+            padding: 30px 30px 20px;
+        }
+        
+        .modal-title {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        
+        .btn-close {
+            filter: invert(1);
+        }
+        
+        .modal-body {
+            padding: 20px 30px 30px;
+        }
+        
+        .form-label {
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .form-control {
+            background-color: #2c3e50;
+            border: 2px solid #2c3e50;
+            color: #ffffff;
+            border-radius: 8px;
+            padding: 12px 15px;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            background-color: #2c3e50;
+            border-color: #3498db;
+            color: #ffffff;
+            box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+        }
+        
+        .form-control::placeholder {
+            color: #bdc3c7;
+        }
+        
+        .plan-summary {
+            background-color: #2c3e50;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .plan-summary h6 {
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .plan-summary .price-display {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .security-info {
+            display: flex;
+            align-items: center;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            margin-top: 15px;
+        }
+        
+        .security-info i {
+            color: #27ae60;
+            margin-right: 8px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #3498db;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .card-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .card-icon {
+            width: 40px;
+            height: 25px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .price-amount {
+                font-size: 2.5rem;
+            }
+            
+            .modal-header,
+            .modal-body {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Choose Your Plan</h1>
+                <p class="section-subtitle">
+                    Select the perfect plan for your business needs. All plans include our core features with different levels of access and support.
+                </p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <!-- Starter Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Starter</h3>
+                        <p class="plan-description">Perfect for individuals and small teams getting started</p>
+                        <div class="price">
+                            <span class="price-amount">$9</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Up to 5 projects</li>
+                            <li><i class="fas fa-check"></i> 10GB storage</li>
+                            <li><i class="fas fa-check"></i> Basic analytics</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                            <li class="unavailable"><i class="fas fa-times"></i> Advanced features</li>
+                            <li class="unavailable"><i class="fas fa-times"></i> Priority support</li>
+                        </ul>
+                        <button class="pricing-btn" data-bs-toggle="modal" data-bs-target="#paymentModal" 
+                                onclick="selectPlan('Starter', '$9', '/month')">Get Started</button>
+                    </div>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3 class="plan-name">Professional</h3>
+                        <p class="plan-description">Ideal for growing businesses and professional teams</p>
+                        <div class="price">
+                            <span class="price-amount">$29</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Unlimited projects</li>
+                            <li><i class="fas fa-check"></i> 100GB storage</li>
+                            <li><i class="fas fa-check"></i> Advanced analytics</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> Team collaboration</li>
+                            <li><i class="fas fa-check"></i> Custom integrations</li>
+                        </ul>
+                        <button class="pricing-btn" data-bs-toggle="modal" data-bs-target="#paymentModal" 
+                                onclick="selectPlan('Professional', '$29', '/month')">Start Free Trial</button>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card">
+                        <h3 class="plan-name">Enterprise</h3>
+                        <p class="plan-description">For large organizations with advanced requirements</p>
+                        <div class="price">
+                            <span class="price-amount">$99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check"></i> Everything in Professional</li>
+                            <li><i class="fas fa-check"></i> Unlimited storage</li>
+                            <li><i class="fas fa-check"></i> Advanced security</li>
+                            <li><i class="fas fa-check"></i> 24/7 phone support</li>
+                            <li><i class="fas fa-check"></i> Custom branding</li>
+                            <li><i class="fas fa-check"></i> Dedicated account manager</li>
+                        </ul>
+                        <button class="pricing-btn" data-bs-toggle="modal" data-bs-target="#paymentModal" 
+                                onclick="selectPlan('Enterprise', '$99', '/month')">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Complete Your Purchase</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <form id="paymentForm">
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="cardNumber" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" 
+                                           maxlength="19" required>
+                                    <div class="card-icons">
+                                        <i class="fab fa-cc-visa fa-2x" style="color: #1a1f71;"></i>
+                                        <i class="fab fa-cc-mastercard fa-2x" style="color: #eb001b;"></i>
+                                        <i class="fab fa-cc-amex fa-2x" style="color: #006fcf;"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" 
+                                               maxlength="5" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="cvv" placeholder="123" 
+                                               maxlength="4" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="cardName" class="form-label">Cardholder Name</label>
+                                    <input type="text" class="form-control" id="cardName" placeholder="John Doe" required>
+                                </div>
+                                
+                                <div class="security-info">
+                                    <i class="fas fa-lock"></i>
+                                    Your payment information is encrypted and secure
+                                </div>
+                                
+                                <button type="submit" class="submit-btn mt-4">
+                                    <i class="fas fa-credit-card me-2"></i>Complete Purchase
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="plan-summary">
+                                <h6>Order Summary</h6>
+                                <div id="selectedPlan">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span id="planName">Starter Plan</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Total</span>
+                                        <span class="price-display" id="planPrice">$9/month</span>
+                                    </div>
+                                </div>
+                                <hr style="border-color: #2c3e50;">
+                                <small class="text-muted">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    You can cancel anytime. No hidden fees.
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Select plan function
+        function selectPlan(planName, price, period) {
+            document.getElementById('planName').textContent = planName + ' Plan';
+            document.getElementById('planPrice').textContent = price + period;
+        }
+        
+        // Format card number input
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '').replace(/[^0-9]/gi, '');
+            let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+            e.target.value = formattedValue;
+        });
+        
+        // Format expiry date input
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+        
+        // CVV input validation
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/[^0-9]/g, '');
+        });
+        
+        // Form submission
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically integrate with a payment processor like Stripe
+            alert('Payment form submitted! In a real application, this would process the payment.');
+            
+            // Close modal after successful submission
+            const modal = bootstrap.Modal.getInstance(document.getElementById('paymentModal'));
+            modal.hide();
+        });
+    </script>
+</body>
+</html>
